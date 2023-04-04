@@ -1,8 +1,32 @@
+/* eslint-disable padded-blocks */
 import React from 'react';
+import styled from 'styled-components';
+import Button from './Button.js';
 
-const Header = ({ title }) => {
+const Header = ({ title, bgColor }) => {
+  const Container = styled.div`
+background-color: ${bgColor};
+color: #666;
+font-size:20px;
+
+.topnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end
+}
+
+li:nth-child(2n) {
+  font-size: 12px;
+  color: red;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+`
   return (
-    <div className="header-container">
+    <Container>
       <nav className="topnav">
         <ul>
           <li href="#home">About</li>
@@ -12,7 +36,8 @@ const Header = ({ title }) => {
         </ul>
       </nav>
       <h1>Get ready for {title}!</h1>
-    </div>
+      <Button>Order!</Button>
+    </Container>
   );
 }
 

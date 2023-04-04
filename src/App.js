@@ -5,7 +5,7 @@ import Footer from 'Footer';
 export const App = () => {
   return (
     <>
-      <Header title="Adventure time" />
+      <Header title="Adventure time" bgColor="pink" />
       <Footer />
     </>
   );
